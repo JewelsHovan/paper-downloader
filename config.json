@@ -1,0 +1,60 @@
+{
+  "papers": [
+    {
+      "doi": "10.1016/j.jpain.2014.06.002",
+      "filename": "Groenewald_2014.pdf",
+      "description": "Impact and Challenges of Pain"
+    },
+    {
+      "doi": "10.1136/amiajnl-2012-001076",
+      "filename": "Heintzelman_2013.pdf",
+      "description": "Impact and Challenges of Pain"
+    },
+    {
+      "doi": "10.1016/j.jbi.2018.10.005",
+      "filename": "Velupillai_2018.pdf",
+      "description": "NLP in Healthcare and Mental Health"
+    },
+    {
+      "doi": "10.18653/v1/2020.bionlp-1.9",
+      "filename": "Mascio_2020.pdf",
+      "description": "NLP in Healthcare and Mental Health"
+    },
+    {
+      "doi": "10.2196/12876",
+      "filename": "Foufi_2019.pdf",
+      "description": "Social Media and Health"
+    },
+    {
+      "doi": "10.1007/s13142-014-0256-1",
+      "filename": "Chou_2014.pdf",
+      "description": "Social Media and Health"
+    },
+     {
+      "doi": "10.1145/2858036.2858207",
+      "filename": "DeChoudhury_2016.pdf",
+      "description": "Social Media and Health"
+    },
+    {
+      "doi": "10.1093/nar/gkh061",
+      "filename": "Bodenreider_2004.pdf",
+      "description": "Ontologies and Terminologies"
+    },
+    {
+      "doi": "10.48550/arXiv.1301.3781",
+      "filename": "Mikolov_2013.pdf",
+      "description": "Word Embeddings and NLP Techniques"
+    },
+    {
+      "doi": "10.3115/v1/D14-1162",
+      "filename": "Pennington_2014.pdf",
+       "description": "Word Embeddings and NLP Techniques"
+    },
+    {
+      "doi": "10.1162/tacl_a_00051",
+      "filename": "Bojanowski_2017.pdf",
+       "description": "Word Embeddings and NLP Techniques"
+    }
+  ],
+  "output_directory": "downloaded_papers"
+}

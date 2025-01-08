@@ -1,0 +1,4 @@
+.pytest_cache/
+downloaded_papers/
+.cursorrules
+.env
