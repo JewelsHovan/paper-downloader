@@ -55,7 +55,7 @@ class PaperDownloader:
             params["api_key"] = self.api_key
             
         try:
-            response = requests.get(f"{self.BASE_URL}/esearch.fcgi", params=params)
+            response = requests.get(f"{self.BASE_URL}/esearch.fcgi", params=params, timeout=60)
             response.raise_for_status()
             data = response.json()
             
@@ -79,7 +79,7 @@ class PaperDownloader:
             params["api_key"] = self.api_key
             
         try:
-            response = requests.get(f"{self.BASE_URL}/efetch.fcgi", params=params)
+            response = requests.get(f"{self.BASE_URL}/efetch.fcgi", params=params, timeout=60)
             response.raise_for_status()
             
             data = xmltodict.parse(response.text)
@@ -124,7 +124,7 @@ class PaperDownloader:
             params["api_key"] = self.api_key
         
         try:
-            response = requests.get(f"{self.BASE_URL}/elink.fcgi", params=params)
+            response = requests.get(f"{self.BASE_URL}/elink.fcgi", params=params, timeout=60)
             response.raise_for_status()
             data = response.json()
             
@@ -149,7 +149,7 @@ class PaperDownloader:
                     full_text_params["api_key"] = self.api_key
                 
                 full_text_response = requests.get(f"{self.BASE_URL}/efetch.fcgi", 
-                                                params=full_text_params)
+                                                params=full_text_params, timeout=60)
                 full_text_response.raise_for_status()
                 
                 # Parse XML and extract full text
