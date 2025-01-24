@@ -8,6 +8,7 @@ import requests
 import xmltodict
 import re
 from typing import Optional, Dict, Any
+from security import safe_requests
 
 # Configure logging
 logging.basicConfig(
@@ -55,7 +56,7 @@ class PaperDownloader:
             params["api_key"] = self.api_key
             
         try:
-            response = requests.get(f"{self.BASE_URL}/esearch.fcgi", params=params)
+            response = safe_requests.get(f"{self.BASE_URL}/esearch.fcgi", params=params)
             response.raise_for_status()
             data = response.json()
             
@@ -79,7 +80,7 @@ class PaperDownloader:
             params["api_key"] = self.api_key
             
         try:
-            response = requests.get(f"{self.BASE_URL}/efetch.fcgi", params=params)
+            response = safe_requests.get(f"{self.BASE_URL}/efetch.fcgi", params=params)
             response.raise_for_status()
             
             data = xmltodict.parse(response.text)
@@ -124,7 +125,7 @@ class PaperDownloader:
             params["api_key"] = self.api_key
         
         try:
-            response = requests.get(f"{self.BASE_URL}/elink.fcgi", params=params)
+            response = safe_requests.get(f"{self.BASE_URL}/elink.fcgi", params=params)
             response.raise_for_status()
             data = response.json()
             
@@ -148,7 +149,7 @@ class PaperDownloader:
                 if self.api_key:
                     full_text_params["api_key"] = self.api_key
                 
-                full_text_response = requests.get(f"{self.BASE_URL}/efetch.fcgi", 
+                full_text_response = safe_requests.get(f"{self.BASE_URL}/efetch.fcgi", 
                                                 params=full_text_params)
                 full_text_response.raise_for_status()
                 
